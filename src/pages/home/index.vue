@@ -26,6 +26,8 @@
 
 <script>
 import { uniSegmentedControl } from "@dcloudio/uni-ui";
+/* API */
+import { test } from "@/api/home/index.js";
 export default {
     name: "HomeIndex",
     components: { uniSegmentedControl },
@@ -37,15 +39,14 @@ export default {
         };
     },
     onReady() {
-        uni.request({
-            url: "https://www.fastmock.site/mock/06826449aee7ec0d03e5b13f37a604ed/allyn/recommend", //仅为示例，并非真实接口地址。
-            method: "Get",
-            success: res => {
-                console.log(res);
-            }
-        });
+        this.test1();
     },
     methods: {
+        async test1() {
+            let { data } = await test();
+            console.log(data);
+            this._.fail_msg_fn();
+        },
         /**
          * @event: 分段器选择事件
          * @param {*} e
