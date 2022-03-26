@@ -17,7 +17,7 @@
         ></uni-segmented-control>
         <!-- Content -->
         <view class="content">
-            <view v-show="current === 0"> 选项卡1的内容 </view>
+            <view v-show="current === 0"> 1选项卡1的内容 </view>
             <view v-show="current === 1"> 选项卡2的内容 </view>
             <view v-show="current === 2"> 选项卡3的内容 </view>
         </view>
@@ -35,6 +35,15 @@ export default {
             items: ["推荐", "分类", "最新", "专辑"], //分段器所有选项
             current: 0
         };
+    },
+    onReady() {
+        uni.request({
+            url: "https://www.fastmock.site/mock/06826449aee7ec0d03e5b13f37a604ed/allyn/recommend", //仅为示例，并非真实接口地址。
+            method: "Get",
+            success: res => {
+                console.log(res);
+            }
+        });
     },
     methods: {
         /**
