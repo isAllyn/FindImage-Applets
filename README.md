@@ -1,19 +1,23 @@
 # item
 
 ## Project setup
+
 ```
-yarn install
+npm i
 ```
 
 ### Compiles and hot-reloads for development
+
 ```
-yarn serve
+npm run dev:w
 ```
 
 ### Compiles and minifies for production
+
 ```
 yarn build
 ```
 
 ### Customize configuration
+
 See [Configuration Reference](https://cli.vuejs.org/config/).
