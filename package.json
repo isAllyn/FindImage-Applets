@@ -63,6 +63,7 @@
     "@dcloudio/uni-quickapp-native": "^2.0.1-33920220314002",
     "@dcloudio/uni-quickapp-webview": "^2.0.1-33920220314002",
     "@dcloudio/uni-stat": "^2.0.1-33920220314002",
+    "@dcloudio/uni-ui": "^1.4.12",
     "@vue/shared": "^3.0.0",
     "core-js": "^3.6.5",
     "flyio": "^0.6.2",
@@ -87,10 +88,14 @@
     "@vue/cli-service": "~4.5.15",
     "babel-plugin-import": "^1.11.0",
     "cross-env": "^7.0.2",
+    "eslint": "^8.12.0",
+    "eslint-plugin-vue": "^8.5.0",
     "jest": "^25.4.0",
     "mini-types": "*",
     "miniprogram-api-typings": "*",
     "postcss-comment": "^2.0.0",
+    "prettier": "^2.6.1",
+    "sass": "^1.49.9",
     "vue-template-compiler": "^2.6.11"
   },
   "browserslist": [

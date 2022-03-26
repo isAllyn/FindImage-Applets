@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'iconfont'; /* project id 3279261 */
+
+  src: url('?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_3279261_bl5k3n16to5.ttf') format('truetype'), url('#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: 'iconfont' !important;
+  font-size: 16px;
+  font-style: normal;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-tupian:before {
+  content: '\e889';
+}
+
+.icon-shipin:before {
+  content: '\e600';
+}
+
+.icon-sousuoleimu:before {
+  content: '\e754';
+}
+
+.icon-wode:before {
+  content: '\e8c6';
+}
+
+.icon-shouye:before {
+  content: '\e8c7';
+}
+
+.icon-hengping:before {
+  content: '\e671';
+}
