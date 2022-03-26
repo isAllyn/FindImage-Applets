@@ -1,0 +1,10 @@
+.Home__ {
+  ::v-deep .segmented-control {
+    .segmented-control__item {
+      .segmented-control__item--text {
+        font-weight: 700;
+        border-bottom-color: red;
+      }
+    }
+  }
+}

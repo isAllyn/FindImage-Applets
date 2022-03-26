@@ -2,34 +2,55 @@
  * @Author: 无聊的鬼_
  * @FilePath: \Record\src\pages\home\index.vue
  * @Date: 2022-03-26 13:21:40
- * @LastEditTime: 2022-03-26 13:50:45
+ * @LastEditTime: 2022-03-26 14:32:35
  * @Description: 首页
 -->
 <template>
-    <view class="box">
-        首页
-        <uni-badge text="1"></uni-badge>1
-        <i class="iconfont icon-tupian"></i>
+    <view class="Home__">
+        <!-- Header The Page Top -->
+        <uni-segmented-control
+            :current="current"
+            :values="items"
+            @clickItem="onClickItem"
+            styleType="text"
+            activeColor="#000000"
+        ></uni-segmented-control>
+        <!-- Content -->
+        <view class="content">
+            <view v-show="current === 0"> 选项卡1的内容 </view>
+            <view v-show="current === 1"> 选项卡2的内容 </view>
+            <view v-show="current === 2"> 选项卡3的内容 </view>
+        </view>
     </view>
 </template>
 
 <script>
-import { uniBadge } from "@dcloudio/uni-ui";
+import { uniSegmentedControl } from "@dcloudio/uni-ui";
 export default {
     name: "HomeIndex",
-    components: { uniBadge },
+    components: { uniSegmentedControl },
 
     data() {
-        return {};
+        return {
+            items: ["推荐", "分类", "最新", "专辑"], //分段器所有选项
+            current: 0
+        };
+    },
+    methods: {
+        /**
+         * @event: 分段器选择事件
+         * @param {*} e
+         */
+        onClickItem(e) {
+            if (this.current != e.currentIndex) {
+                this.current = e.currentIndex;
+            }
+        }
     }
 };
 </script>
 
 <style lang="scss" scoped>
-.box {
-  .box {
-    color: red;
-  }
-}
+@import './style/index.scss';
 
 </style>
