@@ -32,3 +32,8 @@
 ### 使用插件代替 uni.request
 
 `npm i @escook/request-miniprogram -S`
+
+### Plugins
+
+-   日期
+    dayjs

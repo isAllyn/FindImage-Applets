@@ -1,10 +1,21 @@
 .Home__ {
-  ::v-deep .segmented-control {
-    .segmented-control__item {
-      .segmented-control__item--text {
-        font-weight: 700;
-        border-bottom-color: red;
-      }
+    .content {
+        .scroll-container {
+            height: calc(100vh - 36px);
+        }
     }
-  }
+    .FixedLayout {
+        position: fixed;
+        top: 18rpx;
+        right: 10rpx;
+        color: rgba(132, 190, 236, 1);
+    }
+    ::v-deep .segmented-control {
+        .segmented-control__item {
+            .segmented-control__item--text {
+                font-weight: 700;
+                border-bottom-color: rgba(206, 79, 128, 1);
+            }
+        }
+    }
 }

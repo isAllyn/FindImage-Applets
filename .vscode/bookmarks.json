@@ -19,6 +19,16 @@
 					"label": "首页"
 				}
 			]
+		},
+		{
+			"path": "src/pages/home/components/recommend.vue",
+			"bookmarks": [
+				{
+					"line": 0,
+					"column": 4,
+					"label": "首页-推荐"
+				}
+			]
 		}
 	]
 }

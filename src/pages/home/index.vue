@@ -1,8 +1,8 @@
 <!--
  * @Author: 无聊的鬼_
- * @FilePath: \Record\src\pages\home\index.vue
+ * @FilePath: \item\src\pages\home\index.vue
  * @Date: 2022-03-26 13:21:40
- * @LastEditTime: 2022-03-26 14:32:35
+ * @LastEditTime: 2022-04-04 16:36:08
  * @Description: 首页
 -->
 <template>
@@ -13,24 +13,34 @@
             :values="items"
             @clickItem="onClickItem"
             styleType="text"
-            activeColor="#000000"
+            activeColor="rgba(206, 79, 128, 1)"
         ></uni-segmented-control>
+        <!-- PAGE Fixed Box -->
+        <view class="FixedLayout">
+            <i class="iconfont icon-wangyuanjing"></i>
+        </view>
         <!-- Content -->
         <view class="content">
-            <view v-show="current === 0"> 1选项卡1的内容 </view>
-            <view v-show="current === 1"> 选项卡2的内容 </view>
-            <view v-show="current === 2"> 选项卡3的内容 </view>
+            <scroll-view class="scroll-container" :scroll-y="true">
+                <view v-show="current === 0">
+                    <!-- 推荐 -->
+                    <recommend></recommend>
+                </view>
+                <view v-show="current === 1"> 选项卡2的内容 </view>
+                <view v-show="current === 2"> 选项卡3的内容 </view>
+            </scroll-view>
         </view>
     </view>
 </template>
 
 <script>
+/* Component */
 import { uniSegmentedControl } from "@dcloudio/uni-ui";
-/* API */
-import { test } from "@/api/home/index.js";
+import recommend from "@/pages/home/components/recommend.vue";
+
 export default {
     name: "HomeIndex",
-    components: { uniSegmentedControl },
+    components: { uniSegmentedControl, recommend },
 
     data() {
         return {
@@ -38,15 +48,8 @@ export default {
             current: 0
         };
     },
-    onReady() {
-        this.test1();
-    },
+    onReady() {},
     methods: {
-        async test1() {
-            let { data } = await test();
-            console.log(data);
-            this._.fail_msg_fn();
-        },
         /**
          * @event: 分段器选择事件
          * @param {*} e
@@ -61,6 +64,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './style/index.scss';
-
+@import "./style/index.scss";
 </style>
