@@ -2,7 +2,7 @@
  * @Author: 无聊的鬼_
  * @FilePath: \item\src\api\home\index.js
  * @Date: 2022-03-26 19:28:39
- * @LastEditTime: 2022-04-04 17:22:02
+ * @LastEditTime: 2022-04-05 16:50:02
  * @Description:
  */
 import request from "../../utils/request";
@@ -36,6 +36,35 @@ let symbolResult = (res, max = 140, min = 130) => {
         result[index] = str_arr[0] + random + str_arr[1];
     }
     return result;
+};
+/**
+ * @event: 处理单张图片
+ * @issues 防止图片重复
+ * @params {*} url 这个图片的地址
+ */
+let notRepeatTheImage = (url, max = 120, min = 110) => {
+    let str_arr = url.split("KEY");
+    let random_num = Math.floor(Math.random() * (max - min) + min);
+    let result = str_arr[0] + random_num + str_arr[1];
+    return result;
+};
+/**
+ * @event: 专辑下的列表数据
+ * @params {*}
+ */
+export const albumListInfoApi = () => {
+    return new Promise((resolve, reject) => {
+        request
+            .get("/album/list")
+            .then(res => {
+                let result_array = deconstructTheResult(res);
+                for (let index = 0; index < result_array.length; index++) {
+                    result_array[index]["image"] = notRepeatTheImage(result_array[index]["image"]);
+                }
+                resolve(result_array);
+            })
+            .catch(e => reject(e));
+    });
 };
 /**
  * @event: 推荐组件中header部分图片数据

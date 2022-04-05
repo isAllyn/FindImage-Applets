@@ -14,7 +14,7 @@
         .segmented-control__item {
             .segmented-control__item--text {
                 font-weight: 700;
-                border-bottom-color: rgba(206, 79, 128, 1);
+                border-bottom-color: $item-font-color;
             }
         }
     }

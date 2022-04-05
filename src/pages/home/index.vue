@@ -2,7 +2,7 @@
  * @Author: 无聊的鬼_
  * @FilePath: \item\src\pages\home\index.vue
  * @Date: 2022-03-26 13:21:40
- * @LastEditTime: 2022-04-04 16:36:08
+ * @LastEditTime: 2022-04-05 17:06:58
  * @Description: 首页
 -->
 <template>
@@ -24,10 +24,14 @@
             <scroll-view class="scroll-container" :scroll-y="true">
                 <view v-show="current === 0">
                     <!-- 推荐 -->
-                    <recommend></recommend>
+                    <Recommend></Recommend>
                 </view>
                 <view v-show="current === 1"> 选项卡2的内容 </view>
                 <view v-show="current === 2"> 选项卡3的内容 </view>
+                <view v-show="current === 3">
+                    <!-- 专辑 -->
+                    <Album></Album>
+                </view>
             </scroll-view>
         </view>
     </view>
@@ -36,11 +40,11 @@
 <script>
 /* Component */
 import { uniSegmentedControl } from "@dcloudio/uni-ui";
-import recommend from "@/pages/home/components/recommend.vue";
-
+import Recommend from "@/pages/home/components/Recommend.vue";
+import Album from "./components/Album.vue";
 export default {
     name: "HomeIndex",
-    components: { uniSegmentedControl, recommend },
+    components: { uniSegmentedControl, Recommend, Album },
 
     data() {
         return {
@@ -57,6 +61,13 @@ export default {
         onClickItem(e) {
             if (this.current != e.currentIndex) {
                 this.current = e.currentIndex;
+                let str = this.items[e.currentIndex];
+                if (str === "推荐") {
+                    str = "FindImage";
+                }
+                uni.setNavigationBarTitle({
+                    title: str
+                });
             }
         }
     }

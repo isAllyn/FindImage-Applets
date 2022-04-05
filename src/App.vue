@@ -1,8 +1,8 @@
 <!--
  * @Author: 无聊的鬼_
- * @FilePath: \Record\src\App.vue
+ * @FilePath: \item\src\App.vue
  * @Date: 2022-03-26 13:15:03
- * @LastEditTime: 2022-03-26 14:15:42
+ * @LastEditTime: 2022-04-05 15:00:31
  * @Description: 
 -->
 <script>
@@ -20,8 +20,11 @@ export default {
 </script>
 
 <style>
-@import './style/base.css';
+@import "./style/base.css";
 
-@import './style/iconfont.css';
+@import "./style/iconfont.css";
+/* Color UI  */
+@import "~@/style/main.css";
+@import "~@/style/icon.css";
 
 </style>
