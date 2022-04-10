@@ -33,6 +33,21 @@
             }
         }
     ],
+    "subPackages": [
+        {
+            "root": "subpackageNo1",
+            "pages": [
+                {
+                    "path": "albumDetails/index",
+                    "style": {
+                        "navigationBarTitleText": "专辑详情",
+                        "navigationBarBackgroundColor": "#000000",
+                        "navigationBarTextStyle": "white"
+                    }
+                }
+            ]
+        }
+    ],
     "globalStyle": {
         "navigationBarTextStyle": "black",
         "navigationBarTitleText": "uni-app",

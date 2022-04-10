@@ -1,12 +1,12 @@
 <!--
  * @Author: 无聊的鬼_
- * @FilePath: \item\src\components\ListCard\index.vue
+ * @FilePath: \FindImage\src\components\ListCard\index.vue
  * @Date: 2022-04-05 15:27:03
- * @LastEditTime: 2022-04-05 16:02:19
+ * @LastEditTime: 2022-04-10 17:20:15
  * @Description: 列表展示组件
 -->
 <template>
-    <view class="list-card">
+    <view @click="ListEventClick" class="list-card">
         <view class="image">
             <image :src="image" />
         </view>
@@ -16,7 +16,7 @@
         <view class="content">
             {{ content }}
         </view>
-        <view @click="focusOnEventClick" class="icon-box">
+        <view @click.stop="focusOnEventClick" class="icon-box">
             <i v-if="focus_on_bool" class="iconfont icon-yiguanzhu"></i>
             <i v-else class="iconfont icon-guanzhu"></i>
         </view>
@@ -59,6 +59,16 @@ export default {
          */
         focusOnEventClick() {
             this.focus_on_bool = !this.focus_on_bool;
+        },
+        /**
+         * @event: 单个列表整体被点击
+         * @params {*}
+         * 跳转至专辑详情页面
+         */
+        ListEventClick() {
+            uni.navigateTo({
+                url: "/subpackageNo1/albumDetails/index"
+            });
         }
     }
 };

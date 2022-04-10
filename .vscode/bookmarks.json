@@ -1,32 +1,22 @@
 {
 	"files": [
 		{
-			"path": "src/pages.json",
-			"bookmarks": [
-				{
-					"line": 0,
-					"column": 1,
-					"label": "页面配置"
-				}
-			]
-		},
-		{
-			"path": "src/pages/home/index.vue",
+			"path": "src/pages/home/components/Album.vue",
 			"bookmarks": [
 				{
 					"line": 0,
 					"column": 4,
-					"label": "首页"
+					"label": "首页-专辑"
 				}
 			]
 		},
 		{
-			"path": "src/pages/home/components/recommend.vue",
+			"path": "src/subpackageNo1/albumDetails/index.vue",
 			"bookmarks": [
 				{
 					"line": 0,
 					"column": 4,
-					"label": "首页-推荐"
+					"label": "首页-专辑详情"
 				}
 			]
 		}

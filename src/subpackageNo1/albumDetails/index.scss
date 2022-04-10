@@ -1,0 +1,47 @@
+.AlbumDetails__ {
+    .PosterLayout {
+        height: 230px;
+        position: relative;
+        .focus-on-btn {
+            position: absolute;
+            bottom: 5px;
+            right: 10px;
+            height: 50rpx;
+            font-size: 12px;
+            padding: 5px;
+            color: white;
+            background-color: rgba(224, 57, 151, 0.6);
+        }
+    }
+    .TextLayout {
+        .title {
+            background-color: gray;
+            display: flex;
+            padding: 5px;
+            justify-content: flex-start;
+            align-items: flex-end;
+            .avatar {
+                color: gold;
+                margin-right: 10px;
+            }
+            .text {
+                font-weight: 700;
+                font-size: 20px;
+            }
+        }
+        .content_text {
+            padding: 10px;
+            text-indent: 2em;
+            background-color: gray;
+        }
+    }
+    .ImageLayout {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .image-item {
+            width: 33%;
+            height: 130px;
+        }
+    }
+}

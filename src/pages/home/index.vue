@@ -1,8 +1,8 @@
 <!--
  * @Author: 无聊的鬼_
- * @FilePath: \item\src\pages\home\index.vue
+ * @FilePath: \FindImage\src\pages\home\index.vue
  * @Date: 2022-03-26 13:21:40
- * @LastEditTime: 2022-04-05 17:06:58
+ * @LastEditTime: 2022-04-10 17:08:56
  * @Description: 首页
 -->
 <template>
@@ -40,7 +40,7 @@
 <script>
 /* Component */
 import { uniSegmentedControl } from "@dcloudio/uni-ui";
-import Recommend from "@/pages/home/components/Recommend.vue";
+import Recommend from "./components/RecommendTem.vue";
 import Album from "./components/Album.vue";
 export default {
     name: "HomeIndex",
