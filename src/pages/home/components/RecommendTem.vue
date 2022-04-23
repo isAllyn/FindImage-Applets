@@ -2,7 +2,7 @@
  * @Author: 无聊的鬼_
  * @FilePath: \item\src\pages\home\components\recommend.vue
  * @Date: 2022-04-04 15:05:48
- * @LastEditTime: 2022-04-05 17:04:50
+ * @LastEditTime: 2022-04-23 08:57:28
  * @Description: 首页 推荐
 -->
 <template>
@@ -10,7 +10,7 @@
         <!-- PAGE Header -->
         <view class="HeaderLayout">
             <block v-for="(item, index) in header_imageArray" :key="index">
-                <view class="image-item">
+                <view @click="headerImgItemEventClick" class="image-item">
                     <image :src="item" />
                 </view>
             </block>
@@ -71,6 +71,15 @@ export default {
     mounted() {},
 
     methods: {
+        /**
+         * @EVENT: Header部分单个图片点击
+         * @TIP: 点击跳转到专辑详情页
+         */
+        headerImgItemEventClick() {
+            uni.navigateTo({
+                url: "/subpackageNo1/albumDetails/index"
+            });
+        },
         /**
          * @event: 获取该组件的数据
          * @params {*}

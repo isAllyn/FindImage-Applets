@@ -1,0 +1,31 @@
+.ImageDetails__{
+  .HeaderLayout{
+    height: 88px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .head{
+      width: 30%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .img{
+        width: 80%;
+        height: 80%;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+    }
+    .text-container{
+      padding: 10px;
+      flex: 1;
+      height: 100%;
+      .name{
+        margin-bottom: 10px;
+        font-size: 58rpx;
+        font-weight: 600;
+      }
+    }
+  }
+}

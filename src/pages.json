@@ -44,6 +44,14 @@
                         "navigationBarBackgroundColor": "#000000",
                         "navigationBarTextStyle": "white"
                     }
+                },
+                {
+                    "path": "imageDetails/index",
+                    "style": {
+                        "navigationBarTitleText": "图片详情",
+                        "navigationBarBackgroundColor": "#000000",
+                        "navigationBarTextStyle": "white"
+                    }
                 }
             ]
         }

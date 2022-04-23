@@ -37,3 +37,5 @@
 
 -   日期
     dayjs
+    > 中文包在 dayjs/locale/zh-cn.js 中
+    > dayjs.locale("zh-cn");
