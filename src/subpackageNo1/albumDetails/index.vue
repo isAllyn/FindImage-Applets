@@ -2,7 +2,7 @@
  * @Author: 无聊的鬼_
  * @FilePath: \FindImage\src\subpackageNo1\albumDetails\index.vue
  * @Date: 2022-04-10 17:14:52
- * @LastEditTime: 2022-04-23 09:02:44
+ * @LastEditTime: 2022-04-23 10:33:46
  * @Description: 首页 专辑详情
 -->
 <template>
@@ -23,7 +23,7 @@
         <!-- PAGE Image -->
         <view class="ImageLayout">
             <block v-for="(item, index) in display_imageArr" :key="index">
-                <span @click="imgEventClick" class="image-item">
+                <span @click="imgEventClick(item)" class="image-item">
                     <image :src="item" />
                 </span>
             </block>
@@ -54,7 +54,8 @@ export default {
         /**
          * @EVENT: 图片区域单个图片点击时间
          */
-        imgEventClick() {
+        imgEventClick(src) {
+            this.$store.commit("imageDetails/setImage", src);
             uni.navigateTo({
                 url: "/subpackageNo1/imageDetails/index"
             });

@@ -25,7 +25,12 @@
         margin-bottom: 10px;
         font-size: 58rpx;
         font-weight: 600;
+        white-space:nowrap;
       }
     }
+  }
+  .ImageLayout{
+    height: 90vh;
+    background-color: gray;
   }
 }

@@ -14,9 +14,26 @@ function splitData(data) {
     return data["data"]["data"];
 }
 
+/**
+ * @EVENT: 用户信息接口
+ */
 export function userInfoApi() {
     return new Promise((resolve, reject) => {
         request.get("/ImageDetails/userInfo").then(
+            res => {
+                resolve(splitData(res));
+            },
+            e => reject(e)
+        );
+    });
+}
+
+/**
+ * @EVENT: 图片详情接口
+ */
+export function imageSrcApi() {
+    return new Promise((resolve, reject) => {
+        request.get("/ImageDetails/image").then(
             res => {
                 resolve(splitData(res));
             },
