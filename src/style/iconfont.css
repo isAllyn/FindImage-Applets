@@ -1,8 +1,8 @@
 @font-face {
     font-family: "iconfont"; /* Project id 3279261 */
-    src: url("//at.alicdn.com/t/font_3279261_7fe6yjnmzm.woff2?t=1649585554487") format("woff2"),
-        url("//at.alicdn.com/t/font_3279261_7fe6yjnmzm.woff?t=1649585554487") format("woff"),
-        url("//at.alicdn.com/t/font_3279261_7fe6yjnmzm.ttf?t=1649585554487") format("truetype");
+    src: url("//at.alicdn.com/t/font_3279261_bv718cehwiu.woff2?t=1650699266531") format("woff2"),
+        url("//at.alicdn.com/t/font_3279261_bv718cehwiu.woff?t=1650699266531") format("woff"),
+        url("//at.alicdn.com/t/font_3279261_bv718cehwiu.ttf?t=1650699266531") format("truetype");
 }
 
 .iconfont {
@@ -11,6 +11,30 @@
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-pinglun:before {
+    content: "\e62c";
+}
+
+.icon-fenxiangqianwanglianjie:before {
+    content: "\e61e";
+}
+
+.icon-shoucang:before {
+    content: "\e601";
+}
+
+.icon-icon:before {
+    content: "\e651";
+}
+
+.icon-dianzan:before {
+    content: "\e8c3";
+}
+
+.icon-shoucang1:before {
+    content: "\e8c8";
 }
 
 .icon-touxiang:before {

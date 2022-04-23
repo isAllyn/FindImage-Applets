@@ -1,7 +1,7 @@
 /*
  * @Author: BORING GHOST
  * @Date: 2022-04-23 09:12:01
- * @LastEditTime: 2022-04-23 09:27:12
+ * @LastEditTime: 2022-04-23 15:00:18
  * @Description: 图片详情 api
  */
 import request from "@/utils/request";
@@ -34,6 +34,33 @@ export function userInfoApi() {
 export function imageSrcApi() {
     return new Promise((resolve, reject) => {
         request.get("/ImageDetails/image").then(
+            res => {
+                resolve(splitData(res));
+            },
+            e => reject(e)
+        );
+    });
+}
+
+/**
+ * @EVENT: 卡片信息
+ */
+export function cardInfoApi() {
+    return new Promise((resolve, reject) => {
+        request.get("/ImageDetails/cardInfo").then(
+            res => {
+                resolve(splitData(res));
+            },
+            e => reject(e)
+        );
+    });
+}
+/**
+ * @EVENT: 评论区所有的用户
+ */
+export function commentAreaApi() {
+    return new Promise((resolve, reject) => {
+        request.get("/ImageDetails/CommentArea").then(
             res => {
                 resolve(splitData(res));
             },
