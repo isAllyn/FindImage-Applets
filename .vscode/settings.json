@@ -15,7 +15,7 @@
     "csscomb.preset": {},
     "eslint.validate": ["javascript", "javascriptreact", "html", "vue"],
     "[vue]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "octref.vetur"
     },
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"

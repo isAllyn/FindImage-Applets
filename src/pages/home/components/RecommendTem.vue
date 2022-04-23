@@ -2,7 +2,7 @@
  * @Author: 无聊的鬼_
  * @FilePath: \item\src\pages\home\components\recommend.vue
  * @Date: 2022-04-04 15:05:48
- * @LastEditTime: 2022-04-23 08:57:28
+ * @LastEditTime: 2022-04-23 16:48:35
  * @Description: 首页 推荐
 -->
 <template>
@@ -28,7 +28,7 @@
             </view>
             <view class="content">
                 <block v-for="(item, index) in more_imageArray" :key="index">
-                    <view class="image-item">
+                    <view @click="headerImgItemEventClick" class="image-item">
                         <image :src="item" />
                     </view>
                 </block>

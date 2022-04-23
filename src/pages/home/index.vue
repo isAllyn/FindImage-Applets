@@ -2,7 +2,7 @@
  * @Author: 无聊的鬼_
  * @FilePath: \FindImage\src\pages\home\index.vue
  * @Date: 2022-03-26 13:21:40
- * @LastEditTime: 2022-04-10 17:08:56
+ * @LastEditTime: 2022-04-23 16:52:29
  * @Description: 首页
 -->
 <template>
@@ -24,9 +24,12 @@
             <scroll-view class="scroll-container" :scroll-y="true">
                 <view v-show="current === 0">
                     <!-- 推荐 -->
+                    <Classify></Classify>
+                </view>
+                <view v-show="current === 1">
+                    <!-- 分类 -->
                     <Recommend></Recommend>
                 </view>
-                <view v-show="current === 1"> 选项卡2的内容 </view>
                 <view v-show="current === 2"> 选项卡3的内容 </view>
                 <view v-show="current === 3">
                     <!-- 专辑 -->
@@ -42,9 +45,11 @@
 import { uniSegmentedControl } from "@dcloudio/uni-ui";
 import Recommend from "./components/RecommendTem.vue";
 import Album from "./components/Album.vue";
+import Classify from "./components/Classify.vue";
+
 export default {
     name: "HomeIndex",
-    components: { uniSegmentedControl, Recommend, Album },
+    components: { uniSegmentedControl, Recommend, Album, Classify },
 
     data() {
         return {

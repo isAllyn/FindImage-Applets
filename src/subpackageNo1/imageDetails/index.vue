@@ -1,7 +1,7 @@
 <!--
  * @Author: BORING GHOST
  * @Date: 2022-04-23 09:00:28
- * @LastEditTime: 2022-04-23 16:35:30
+ * @LastEditTime: 2022-04-23 16:45:30
  * @Description: 图片详情页
 -->
 <template>
@@ -116,12 +116,12 @@ export default {
                 uni.showLoading({
                     title: "下载中..."
                 });
-                let result = await uni.downloadFile({
-                    url: this.image_src
-                });
+                // let result = await uni.downloadFile({
+                //     url: this.image_src
+                // });
                 /* eslint-disable-next-line */
-                let { statusCode, tempFilePath } = result[1];
-                if (statusCode !== 200) return;
+                // let { statusCode, tempFilePath } = result[1];
+                // if (statusCode !== 200) return;
                 //TODO :使用下载功能将下面注释解开
                 // let data = await uni.saveImageToPhotosAlbum({ filePath: tempFilePath });
                 successToast("下载成功!");
